@@ -45,9 +45,9 @@ CTexture::~CTexture()
 //********************************************
 // Alloc
 //********************************************
-int CTexture::Alloc(unsigned int width,
-                                        unsigned int height,
-                                        unsigned int depth)
+int CTexture::Alloc(unsigned int width, 
+                    unsigned int height, 
+                    unsigned int depth)
 {
     Free();
 
@@ -103,9 +103,9 @@ void CTexture::Free()
 // Redirection
 //********************************************
 int CTexture::ReadFile(const char *filename,
-                                             unsigned int width,
-                                             unsigned int height,
-                                             unsigned int depth)
+                       unsigned int width,
+                       unsigned int height,
+                       unsigned int depth)
 {
     // Cleanup
     Free();
@@ -290,7 +290,7 @@ void CTexture::UpdateWidthByte32()
 // WidthByte32
 //********************************************
 unsigned int CTexture::WidthByte32(unsigned int width,
-                                                                     unsigned int depth)
+                                   unsigned int depth)
 {
     // 32 bits alignment (4 bytes)
     int rest=(width*depth/8)%4;
@@ -329,10 +329,10 @@ void CTexture::UpdateHeader()
 // Accept only 24 or 32 bits
 // Size : 2^n x 2^m
 //********************************************
-int CTexture::ReadFileRAW(const char *filename,
-                                                    unsigned int width,
-                                                    unsigned int height,
-                                                    unsigned int depth)
+int CTexture::ReadFileRAW(const char *filename, 
+                          unsigned int width, 
+                          unsigned int height, 
+                          unsigned int depth)
 {
 
     ASSERT(width>0);
@@ -502,12 +502,12 @@ int CTexture::SaveFileBMP(char *filename)
 
     // File header
     BITMAPFILEHEADER FileHeader;
-  WORD sign = ((WORD) ('M' << 8) | 'B');
+    WORD sign = ((WORD) ('M' << 8) | 'B');
     FileHeader.bfType = sign;
-  FileHeader.bfSize = 14 + 40 + m_WidthByte32*m_Height; 
-  FileHeader.bfReserved1 = 0; 
-  FileHeader.bfReserved2 = 0; 
-  FileHeader.bfOffBits = 54; 
+    .bfSize = 14 + 40 + m_WidthByte32*m_Height; 
+    FileHeader.bfReserved1 = 0; 
+    FileHeader.bfReserved2 = 0; 
+    FileHeader.bfOffBits = 54; 
 
     TRACE("\nSave BMP File...\n");
     TRACE("FileHeader.bfType : %d\n",FileHeader.bfType);
@@ -703,9 +703,9 @@ int CTexture::BGRtoRGB(void)
 // Extract
 //********************************************
 int CTexture::Extract(int left,
-                                            int top,
-                                            int right,
-                                            int bottom)
+                      int top,
+                      int right,
+                      int bottom)
 {
     ASSERT(IsValid());
 
@@ -768,9 +768,9 @@ int CTexture::Extract(int left,
 // DuplicateMirror
 //********************************************
 int CTexture::DuplicateMirror(int left,
-                                                            int top,
-                                                            int right,
-                                                            int bottom)
+                              int top,
+                              int right,
+                              int bottom)
 {
 
     if(!Extract(left,top,right,bottom))
@@ -847,9 +847,9 @@ int CTexture::DuplicateMirror(int left,
 // DuplicateRepeatWidth
 //********************************************
 int CTexture::DuplicateRepeatWidth(int left,
-                                                                     int top,
-                                                                     int right,
-                                                                     int bottom)
+                                   int top,
+                                   int right,
+                                   int bottom)
 {
     if(!Extract(left,top,right,bottom))
         return 0;
@@ -1004,7 +1004,7 @@ int CTexture::PutAlpha(CTexture *pTexture)
     for(int i=0;i<size;i++)
         m_pData[4*i+3] = (unsigned char)((int)pData[BytePerPixel*i+0]+
                                          (int)pData[BytePerPixel*i+1]+
-                                                                         (int)pData[BytePerPixel*i+2])/3;
+                                         (int)pData[BytePerPixel*i+2])/3;
 
     return 1;
 }
@@ -1019,10 +1019,10 @@ int CTexture::PutAlpha(CTexture *pTexture)
 // Draw
 //********************************************
 int CTexture::Draw(CDC *pDC,
-                                     int xOffset,
-                                     int yOffset,
-                                     int width,
-                                     int height)
+                   int xOffset,
+                   int yOffset,
+                   int width,
+                   int height)
 {
     // Checking
     if(!IsValid())
@@ -1036,26 +1036,26 @@ int CTexture::Draw(CDC *pDC,
 
     // Painting
     return SetDIBitsToDevice(pDC->m_hDC,
-                               xOffset,
-                                                     yOffset,
-                                                     width,
-                                                     height,
-                                                     0,
-                                                     0,
-                                                     0,
-                                                     m_Height,
-                                                     GetData(),
-                                                     (CONST BITMAPINFO *)&m_Header,
-                                                     DIB_RGB_COLORS);
+                             xOffset,
+                             yOffset,
+                             width,
+                             height,
+                             0,
+                             0,
+                             0,
+                             m_Height,
+                             GetData(),
+                             (CONST BITMAPINFO *)&m_Header,
+                             DIB_RGB_COLORS);
 }
 
 //********************************************
 // ReadBuffer
 //********************************************
 int CTexture::ReadBuffer(unsigned char *buffer, 
-                                                 int width, 
-                                                 int height, 
-                                                 int depth)
+                         int width, 
+                         int height, 
+                         int depth)
 {
     if(buffer == NULL)
         return 0;
@@ -1077,7 +1077,7 @@ int CTexture::ReadBuffer(unsigned char *buffer,
 // Grey
 //********************************************
 int CTexture::Grey(unsigned int x,
-                                     unsigned int y)
+                   unsigned int y)
 {
     ASSERT(x<m_Width && x>=0);
     ASSERT(y<m_Height && y>=0);
