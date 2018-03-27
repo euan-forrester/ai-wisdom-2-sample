@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DlgOgl - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/DlgOgl.res" /d "NDEBUG" /d "_AFXDLL" "C:\My Documents\AI Wisdom 2 stuff\Sample code\First link example\DlgOgl.rc"" 
+Creating temporary file "C:\DOCUME~1\deforres\LOCALS~1\Temp\RSP16B.tmp" with contents
+[
+opengl32.lib glu32.lib Winmm.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Intelligent steering using PID controllers.pdb" /machine:I386 /out:"Release/Intelligent steering using PID controllers.exe" 
+".\Release\CMissile.obj"
+".\Release\CPidController.obj"
+".\Release\CTarget.obj"
+".\Release\CVector2.obj"
+".\Release\CWorld.obj"
+".\Release\DlgOgl.obj"
+".\Release\DlgOglDlg.obj"
+".\Release\GlView.obj"
+".\Release\picture.obj"
+".\Release\slider.obj"
+".\Release\StdAfx.obj"
+".\Release\Texture.obj"
+".\Release\DlgOgl.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\deforres\LOCALS~1\Temp\RSP16B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+Intelligent steering using PID controllers.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

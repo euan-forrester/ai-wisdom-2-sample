@@ -1,0 +1,342 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\DlgOgl.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\DlgOgl.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 327, 54
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Intelligent Steering Using PID Controllers"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Intelligent Steering Using PID Controllers",IDC_STATIC,
+                    40,10,135,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2003",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,270,5,50,14,WS_GROUP
+END
+
+IDD_DLGOGL_DIALOG DIALOGEX 0, 0, 547, 345
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Intelligent Steering Using PID Controllers"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_OPENGLWIN,"Static",SS_BLACKFRAME,10,5,395,330
+    CONTROL         "PID Controller",IDC_RADIO_MISSILE_CONTROL_PID,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,431,15,60,10
+    CONTROL         "Keyboard (numpad)",IDC_RADIO_MISSILE_CONTROL_KEYBOARD,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,431,25,75,10
+    CONTROL         "Automatic",IDC_RADIO_TARGET_CONTROL_AUTOMATIC,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,431,55,60,10
+    CONTROL         "Keyboard (W-A-S-D)",IDC_RADIO_TARGET_CONTROL_KEYBOARD,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,431,65,80,10
+    LTEXT           "Missile control:",IDC_STATIC,415,5,55,10
+    LTEXT           "Target control:",IDC_STATIC,415,45,50,10
+    LTEXT           "Missile steering:",IDC_STATIC,415,90,50,10
+    EDITTEXT        IDC_EDIT_MISSILE_STEERING_P,435,105,20,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_MISSILE_STEERING_I,435,120,20,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_EDIT_MISSILE_STEERING_D,435,135,20,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    LTEXT           "P:",IDC_STATIC,425,105,8,8
+    LTEXT           "I:",IDC_STATIC,425,120,8,10
+    LTEXT           "D:",IDC_STATIC,425,135,10,10
+    CONTROL         "Pause",IDC_CHECK_PAUSE_WORLD,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,415,320,120,15
+    CONTROL         "",IDC_SLIDER_MISSILE_STEERING_P,
+                    "{373FF7F0-EB8B-11CD-8820-08002B2F4F5A}",WS_TABSTOP,455,
+                    105,65,10
+    CONTROL         "",IDC_SLIDER_MISSILE_STEERING_I,
+                    "{373FF7F0-EB8B-11CD-8820-08002B2F4F5A}",WS_TABSTOP,455,
+                    120,65,10
+    CONTROL         "",IDC_SLIDER_MISSILE_STEERING_D,
+                    "{373FF7F0-EB8B-11CD-8820-08002B2F4F5A}",WS_TABSTOP,455,
+                    135,65,10
+    PUSHBUTTON      "Reset sliders",IDC_BUTTON_RESET_SLIDERS,415,300,120,15
+    LTEXT           "Missile acceleration:",IDC_STATIC,415,160,65,10
+    EDITTEXT        IDC_EDIT_MISSILE_ACCELERATION,435,175,20,12,
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    CONTROL         "",IDC_SLIDER_MISSILE_ACCELERATION,
+                    "{373FF7F0-EB8B-11CD-8820-08002B2F4F5A}",WS_TABSTOP,455,
+                    175,65,10
+    LTEXT           "Target speed:",IDC_STATIC,415,195,65,10
+    EDITTEXT        IDC_EDIT_TARGET_SPEED,435,210,20,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    CONTROL         "",IDC_SLIDER_TARGET_SPEED,
+                    "{373FF7F0-EB8B-11CD-8820-08002B2F4F5A}",WS_TABSTOP,455,
+                    210,65,10
+    PUSHBUTTON      "?",IDC_BUTTON_HELP_P_COEFFICIENT,520,105,15,10
+    PUSHBUTTON      "?",IDC_BUTTON_HELP_I_COEFFICIENT,520,120,15,10
+    PUSHBUTTON      "?",IDC_BUTTON_HELP_D_COEFFICIENT,520,135,15,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "DlgOgl MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "DlgOgl\0"
+            VALUE "LegalCopyright", "Copyright (C) 2000\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "DlgOgl.EXE\0"
+            VALUE "ProductName", "DlgOgl Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_DLGOGL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 540
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 338
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DLGOGL_DIALOG DLGINIT
+BEGIN
+    IDC_SLIDER_MISSILE_STEERING_P, 0x376, 162, 0
+0x0017, 0x0000, 0x0020, 0x0071, 0x0068, 0x006a, 0x0020, 0x005a, 0x0074, 
+0x0075, 0x0051, 0x0068, 0x0061, 0x003b, 0x006a, 0x0064, 0x0066, 0x006e, 
+0x005b, 0x0069, 0x0061, 0x0065, 0x0074, 0x0072, 0x0020, 0x4321, 0x1234, 
+0x0008, 0x0000, 0x0a21, 0x0000, 0x01a7, 0x0000, 0x7e86, 0xe6e1, 0x0002, 
+0x0005, 0x001c, 0x0000, 0x0000, 0x0000, 0x0005, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x000a, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0xef01, 0xabcd, 
+0x0000, 0x0005, 0x7188, 0x0014, 0x0006, 0x0000, 0x0000, 0x0000, 0xd4d4, 
+0x00d4, 0x0000, 0x0000, 0xde1f, 0xbdec, 0x0001, 0x0005, 0x0000, 0x0000, 
+
+    IDC_SLIDER_MISSILE_STEERING_I, 0x376, 162, 0
+0x0017, 0x0000, 0x0020, 0x0071, 0x0068, 0x006a, 0x0020, 0x005a, 0x0074, 
+0x0075, 0x0051, 0x0068, 0x0061, 0x003b, 0x006a, 0x0064, 0x0066, 0x006e, 
+0x005b, 0x0069, 0x0061, 0x0065, 0x0074, 0x0072, 0x0020, 0x4321, 0x1234, 
+0x0008, 0x0000, 0x0a21, 0x0000, 0x01a7, 0x0000, 0x7e86, 0xe6e1, 0x0002, 
+0x0005, 0x001c, 0x0000, 0x0000, 0x0000, 0x0005, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x000a, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0xef01, 0xabcd, 
+0x0000, 0x0005, 0x7188, 0x0014, 0x0006, 0x0000, 0x0000, 0x0000, 0xd4d4, 
+0x00d4, 0x0000, 0x0000, 0xde1f, 0xbdec, 0x0001, 0x0005, 0x0000, 0x0000, 
+
+    IDC_SLIDER_MISSILE_STEERING_D, 0x376, 162, 0
+0x0017, 0x0000, 0x0020, 0x0071, 0x0068, 0x006a, 0x0020, 0x005a, 0x0074, 
+0x0075, 0x0051, 0x0068, 0x0061, 0x003b, 0x006a, 0x0064, 0x0066, 0x006e, 
+0x005b, 0x0069, 0x0061, 0x0065, 0x0074, 0x0072, 0x0020, 0x4321, 0x1234, 
+0x0008, 0x0000, 0x0a21, 0x0000, 0x01a7, 0x0000, 0x7e86, 0xe6e1, 0x0002, 
+0x0005, 0x001c, 0x0000, 0x0000, 0x0000, 0x0005, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x000a, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0xef01, 0xabcd, 
+0x0000, 0x0005, 0x7188, 0x0014, 0x0006, 0x0000, 0x0000, 0x0000, 0xd4d4, 
+0x00d4, 0x0000, 0x0000, 0xde1f, 0xbdec, 0x0001, 0x0005, 0x0000, 0x0000, 
+
+    IDC_SLIDER_MISSILE_ACCELERATION, 0x376, 162, 0
+0x0017, 0x0000, 0x0020, 0x0071, 0x0068, 0x006a, 0x0020, 0x005a, 0x0074, 
+0x0075, 0x0051, 0x0068, 0x0061, 0x003b, 0x006a, 0x0064, 0x0066, 0x006e, 
+0x005b, 0x0069, 0x0061, 0x0065, 0x0074, 0x0072, 0x0020, 0x4321, 0x1234, 
+0x0008, 0x0000, 0x0a21, 0x0000, 0x01a7, 0x0000, 0x7e86, 0xe6e1, 0x0002, 
+0x0005, 0x001c, 0x0000, 0x0000, 0x0000, 0x0005, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x000a, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0xef01, 0xabcd, 
+0x0000, 0x0005, 0x7188, 0x0014, 0x0006, 0x0000, 0x0000, 0x0000, 0xd4d4, 
+0x00d4, 0x0000, 0x0000, 0xde1f, 0xbdec, 0x0001, 0x0005, 0x0000, 0x0000, 
+
+    IDC_SLIDER_TARGET_SPEED, 0x376, 162, 0
+0x0017, 0x0000, 0x0020, 0x0071, 0x0068, 0x006a, 0x0020, 0x005a, 0x0074, 
+0x0075, 0x0051, 0x0068, 0x0061, 0x003b, 0x006a, 0x0064, 0x0066, 0x006e, 
+0x005b, 0x0069, 0x0061, 0x0065, 0x0074, 0x0072, 0x0020, 0x4321, 0x1234, 
+0x0008, 0x0000, 0x0a21, 0x0000, 0x01a7, 0x0000, 0x7e86, 0xe6e1, 0x0002, 
+0x0005, 0x001c, 0x0000, 0x0000, 0x0000, 0x0005, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x000a, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0xef01, 0xabcd, 
+0x0000, 0x0005, 0x7188, 0x0014, 0x0006, 0x0000, 0x0000, 0x0000, 0xd4d4, 
+0x00d4, 0x0000, 0x0000, 0xde1f, 0xbdec, 0x0001, 0x0005, 0x0000, 0x0000, 
+
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Intelligent Steering Using PID Controllers..."
+    IDS_HELP_CAPTION        "Intelligent Steering Using PID Controllers"
+    IDS_HELP_P_COEFFICIENT  "P: This is the coefficient of the term that is proportional to the current value of the error."
+    IDS_HELP_I_COEFFICIENT  "I: This is the coefficient of the term that is proportional to the integral (sum over time) of the error."
+    IDS_HELP_D_COEFFICIENT  "D: This is the coefficient of the term that is proportional to the current derivative (rate of change) of the error."
+    IDS_ERROR_EXPLANATION   "\n\nThe error is the difference between the desired direction of the missile (towards the target) and its current direction."
+    IDS_EQUATION            "\n\nThe PID controller's equation looks like this:\n\nSteering output = P * <current error> + I * <integral of error> + D * <derivative of error>"
+    IDS_TEXTURE_DIRECTORY   "Textures\\"
+    IDS_TARGET_TEXTURE      "target.raw"
+    IDS_PID_TEXTBOX_NUMBER_FORMAT "%2.1f"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ACCELERATION_SPEED_TEXTBOX_NUMBER_FORMAT "%4.0f"
+    IDS_HELP_P_COEFFICIENT_2 
+                            "\n\nIncreasing this value will make the missile turn more quickly towards the target. Making this value negative will make the missile turn away from the target."
+    IDS_HELP_I_COEFFICIENT_2 
+                            "\n\nIncreasing this value will give the missile more 'momentum' as it turns, possibly causing it to overshoot the target. Making this value negative will make the missile turn away from the target. "
+    IDS_HELP_D_COEFFICIENT_2 
+                            "\n\nIncreasing this value will give the missile more dampening as it turns, reducing its tendancy to overshoot the target. Making this value negative will cause the missile to dramatically overshoot the target, and large negative values will result in erratic behavior."
+    IDS_MISSILE_TEXTURE_NO_FLAME "missile_no_flame.raw"
+    IDS_MISSILE_TEXTURE_FLAME_1 "missile_flame_1.raw"
+    IDS_MISSILE_TEXTURE_FLAME_2 "missile_flame_2.raw"
+    IDS_MISSILE_TEXTURE_FLAME_3 "missile_flame_3.raw"
+    IDS_EXPLOSION_TEXTURE   "explosion.raw"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\DlgOgl.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
