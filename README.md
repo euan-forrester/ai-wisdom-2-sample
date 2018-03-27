@@ -6,6 +6,10 @@ It's the companion to the article Intelligent Steering Using PID Controllers.
 
 ---
 
+A more advanced, self-tuning, version of this same demo can be found here: https://github.com/euan-forrester/ai-wisdom-3-sample
+
+---
+
 ## Requirements
 
 This sample requires Windows XP to run, and MS VC.Net 2003 to compile
