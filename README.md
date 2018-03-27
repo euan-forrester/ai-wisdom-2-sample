@@ -16,7 +16,7 @@ This sample requires Windows XP to run, and MS VC.Net 2003 to compile
 
 ## Troubleshooting
 
-- On some versions of Windows XP, the program will exit as soon as it's started, and will assert inside MFC code if run in debug mode. To fix this, open a DOS prompt, go to this directory, and type "regsvr32 COMCTL32.OCX" 
+- On some versions of Windows XP, the program will exit as soon as it's started, and will assert inside MFC code if run in debug mode. To fix this, open a DOS prompt, go to this directory, and type `regsvr32 COMCTL32.OCX` 
 
 ## Usage notes
 
