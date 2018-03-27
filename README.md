@@ -28,32 +28,22 @@ This sample requires Windows XP to run, and MS VC.Net 2003 to compile
 
 ## Files in this project
 
-`CPidController.hpp`, `CPidController.h`:   
-    Implements a PID controller. Used to steer the missile.
+`CPidController.hpp`, `CPidController.h`: Implements a PID controller. Used to steer the missile.
 
-`CMissile.cpp`, `CMissile.h`:
-    Implements the missile.
+`CMissile.cpp`, `CMissile.h`: Implements the missile.
 
-`CTarget.cpp`, `CTarget.h`:
-    Implements the target of the missile.
+`CTarget.cpp`, `CTarget.h`: Implements the target of the missile.
 
-`CWorld.cpp`, `CWorld.h`:
-    Implements the world containing a missile and its target.
+`CWorld.cpp`, `CWorld.h`: Implements the world containing a missile and its target.
 
-`CVector2.cpp`, `CVector2.h`:
-    Simple 2D vector class.
+`CVector2.cpp`, `CVector2.h`: Simple 2D vector class.
 
-`GlView.cpp`, `GlView.h`:
-    Implements an OpenGL viewport.
+`GlView.cpp`, `GlView.h`: Implements an OpenGL viewport.
 
-`Texture.cpp`, `Texture.h`:
-    Implements an OpenGL texture.   
+`Texture.cpp`, `Texture.h`: Implements an OpenGL texture.   
 
-`picture.cpp`, `picture.h`, `slider.cpp`, `slider.h`:
-    Files created by Visual Studio for using the Microsoft Slider Control.
+`picture.cpp`, `picture.h`, `slider.cpp`, `slider.h`: Files created by Visual Studio for using the Microsoft Slider Control.
 
-`Textures\`
-    Contains all of the textures used in the demo.
+`Textures\`: Contains all of the textures used in the demo.
 
-`ACKNOWLEDGEMENTS.md`:
-    List of people who contributed to this demo.
+`ACKNOWLEDGEMENTS.md`: List of people who contributed to this demo.
