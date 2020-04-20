@@ -12,7 +12,7 @@ A more advanced, self-tuning, version of this same demo can be found here: https
 
 When you first start the demo, it opens with a missile chasing a target. The target moves about randomly (or can be controlled with the keyboard), and the missile tries to follow it. The PID controller steering the missile is initialized with tuning values that make it track the target reasonably well.
 
-#### The P term
+### The P term
 
 ![Setting the PID values to 1, 0, 0](/images/settings-p1.gif)
 
@@ -22,7 +22,7 @@ If we try changing the tuning values to P = 1, I = 0, and D = 0 we can see the e
 
 Clicking on the ? beside the P term gives us this explanation.
 
-#### The I term
+### The I term
 
 ![Setting the PID values to 0, 1, 0](/images/settings-i1.gif)
 
@@ -32,9 +32,9 @@ We can further explore the tuning values by setting P = 0, I = 1, and D = 0. Her
 
 And the demo gives us this explanation of the I term.
 
-![Setting the PID values to 0, 0, 1](/images/settings-d1.gif)
+### The D term
 
-#### The D term
+![Setting the PID values to 0, 0, 1](/images/settings-d1.gif)
 
 Lastly we can explore the final term by setting P = 0, I = 0, and D = 1. Since the D term is for damping the missile's turning, we see the missile behaving pretty erratically when it's used alone. Note that I had to manually control the target so I could eventually steer it into the missile otherwise they may have taken a long time to collide.
 
@@ -44,11 +44,11 @@ Here's the demo's explanation for the D term.
 
 ## Running the demo
 
-#### Requirements
+### Requirements
 
 This sample runs on Windows, and can run on Windows 10: see the Releases tab for more info and to download the executable. I haven't tried compiling it in a long time! But at the time I used MS VC.Net 2003.
 
-#### Usage notes
+### Usage notes
 
 - If you choose to steer the missile using the keyboard, use 8 key on the numpad to accelerate, and use 4 and 6 to steer left and right. Hopefully, you will discover that the missile is actually quite difficult to control.
 
