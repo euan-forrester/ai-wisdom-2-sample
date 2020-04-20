@@ -46,7 +46,9 @@ Here's the demo's explanation for the D term.
 
 ### Requirements
 
-This sample runs on Windows, and can run on Windows 10: see the Releases tab for more info and to download the executable. I haven't tried compiling it in a long time! But at the time I used MS VC.Net 2003.
+This sample runs on Windows, and can run on Windows 10: see the Releases tab for more info and to download the executable. 
+
+I haven't tried compiling it in a long time! But at the time I used MS VC.Net 2003.
 
 ### Usage notes
 
